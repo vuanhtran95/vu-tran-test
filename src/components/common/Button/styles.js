@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { COLORS, FONT, SPACING } from "../../../constants";
+import { COLORS, FONT, SPACING } from "../../../shared";
 
 export const StyledButton = styled.button`
   width: 193px;
@@ -13,4 +13,5 @@ export const StyledButton = styled.button`
   background-color: ${COLORS.PRIMARY};
   color: white;
   border: none;
+  cursor: pointer;
 `;

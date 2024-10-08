@@ -1,4 +1,5 @@
 import * as S from "./styles";
+import PropTypes from "prop-types";
 
 const Card = ({ item }) => {
   const { title, content, category, decision, company } = item;
@@ -27,6 +28,10 @@ const Card = ({ item }) => {
       </S.AdditionalInfo>
     </S.CardWrapper>
   );
+};
+
+Card.propTypes = {
+  item: PropTypes.object,
 };
 
 export default Card;

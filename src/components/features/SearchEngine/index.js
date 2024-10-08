@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
-import { getSearchData } from "../../../services";
+import { Button, Dropdown, InputField, Card } from "components/common";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import * as S from "./styles";
-import InputField from "../../common/InputField";
-import Button from "../../common/Button";
-import Dropdown from "../../common/Dropdown";
-import Card from "../../common/Card";
+
+import { getSearchData } from "../../../services";
 
 const SearchEngine = () => {
   const [data, setData] = useState(getSearchData());
+
+  const [searchValue, setSearchValue] = useState("");
 
   useEffect(() => {
     getPageData();
@@ -19,12 +20,21 @@ const SearchEngine = () => {
 
   return (
     <S.SearchEngine>
-      <S.SearchTitle>AI-Powered Regulatory Search</S.SearchTitle>
-      <S.SearchSubTitle>Use the search engine to search for publications from courts and regulators.</S.SearchSubTitle>
+      <S.SearchHeader>
+        <S.SearchTitle>AI-Powered Regulatory Search</S.SearchTitle>
+        <S.SearchSubTitle>
+          Use the search engine to search for publications from courts and regulators.
+        </S.SearchSubTitle>
+      </S.SearchHeader>
 
       {/* Search Input and Button */}
       <S.SearchGroup>
-        <InputField placeholder="Search" />
+        <InputField
+          value={searchValue}
+          onChange={e => setSearchValue(e.target.value)}
+          icon={faSearch}
+          placeholder="Search"
+        />
         <Button label="Search" />
       </S.SearchGroup>
 
@@ -37,12 +47,18 @@ const SearchEngine = () => {
       </S.DropdownGroup>
 
       {/* Clear search */}
-      <p>Clear filter</p>
+      <S.ClearFilter>Clear filter</S.ClearFilter>
 
       {/* Result section */}
       <S.ResultFilter>
-        <S.ResultTitle>Result</S.ResultTitle>
-        <p>Showing results 1-5 of 616.</p>
+        <div>
+          <S.ResultTitle>Result</S.ResultTitle>
+          <S.ResultSubTitle>Showing results 1-5 of 616.</S.ResultSubTitle>
+        </div>
+        <S.SortFilter>
+          <Dropdown value={5} />
+          <Dropdown placeholder="Sort By" />
+        </S.SortFilter>
       </S.ResultFilter>
 
       {/* Result container */}

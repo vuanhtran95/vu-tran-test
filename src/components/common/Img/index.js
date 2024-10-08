@@ -1,24 +1,25 @@
 import { useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import * as S from "./styles";
-
-const Icon = ({ icon, url }) => {
+const Img = ({ src, alt, url }) => {
   let history = useHistory();
 
   return (
-    <S.IconItem
+    <img
+      src={src}
+      alt={alt}
       onClick={() => {
         history.push(url);
-      }}>
-      {icon}
-    </S.IconItem>
+      }}
+      width={32}
+    />
   );
 };
 
-Icon.propTypes = {
-  icon: PropTypes.string.isRequired,
+Img.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string,
   url: PropTypes.string,
 };
 
-export default Icon;
+export default Img;

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import Icon from "../Icon";
 import * as S from "./styles";
 
@@ -9,6 +11,10 @@ const SocialMedia = ({ items }) => {
       })}
     </S.SocialMediaWrapper>
   );
+};
+
+SocialMedia.propTypes = {
+  items: PropTypes.array,
 };
 
 export default SocialMedia;

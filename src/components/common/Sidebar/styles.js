@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SPACING } from "../../../constants";
+import { SPACING } from "../../../shared";
 
 export const SideWrapper = styled.div`
   width: 60px;
