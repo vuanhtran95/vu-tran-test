@@ -10,6 +10,7 @@ export const SORT_ORDER = Object.freeze({
   TITLE_DESC: "TITLE_DESC",
   DATE_ASC: "DATE_ASC",
   DATE_DESC: "DATE_DESC",
+  // can add more depends on the requirement
 });
 
 export const sortOrderOptions = [

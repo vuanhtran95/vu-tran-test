@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import { StyledDropdown } from "./styles";
 import { COLORS } from "shared";
+import * as S from "./styles";
 
 const Dropdown = ({ placeholder, options, value, onChange, width, height, isMulti }) => {
   const customStyles = {
@@ -22,7 +22,7 @@ const Dropdown = ({ placeholder, options, value, onChange, width, height, isMult
   };
 
   return (
-    <StyledDropdown
+    <S.StyledDropdown
       onChange={onChange}
       placeholder={placeholder}
       options={options}
@@ -38,7 +38,9 @@ Dropdown.propTypes = {
   options: PropTypes.array,
   value: PropTypes.string,
   width: PropTypes.number,
+  height: PropTypes.number,
   onChange: PropTypes.func,
+  isMulti: PropTypes.bool,
 };
 
 export default Dropdown;

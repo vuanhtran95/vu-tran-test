@@ -6,9 +6,8 @@ import * as S from "./styles";
 import { forwardRef } from "react";
 import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 
-const CustomInput = forwardRef(({ value, onClick, placeholder }, ref) => (
-    <S.StyledCalendarInput onClick={onClick} ref={ref} type="text" value={value} readOnly placeholder="Date" />
-  
+const CustomInput = forwardRef(({ value, onClick }, ref) => (
+  <S.StyledCalendarInput onClick={onClick} ref={ref} type="text" value={value} readOnly placeholder="Date" />
 ));
 
 const DateSelect = ({ value, onChange, placeholder }) => {

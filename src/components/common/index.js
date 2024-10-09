@@ -9,5 +9,23 @@ import Img from "./Img";
 import InputField from "./InputField";
 import Sidebar from "./Sidebar";
 import SocialMedia from "./SocialMedia";
+import Pagination from "./Pagination";
+import DatePicker from "react-datepicker";
+import ButtonText from "./ButtonText";
 
-export { Avatar, Button, Card, Dropdown, Header, Footer, Icon, Img, InputField, Sidebar, SocialMedia };
+export {
+  ButtonText,
+  DatePicker,
+  Avatar,
+  Button,
+  Card,
+  Dropdown,
+  Header,
+  Footer,
+  Icon,
+  Img,
+  InputField,
+  Sidebar,
+  SocialMedia,
+  Pagination,
+};

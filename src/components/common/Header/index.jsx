@@ -1,13 +1,14 @@
 import Avatar from "../Avatar";
 import * as S from "./styles";
 
-const userName = "Name Surname";
+const fullName = "Name Surname";
+const userName = "Chris Chan";
 
 const Header = () => {
   return (
     <S.HeaderWrapper>
-      <S.FullName>{userName}</S.FullName>
-      <Avatar name="Chris Chan" />
+      <S.FullName>{fullName}</S.FullName>
+      <Avatar name={userName} />
     </S.HeaderWrapper>
   );
 };

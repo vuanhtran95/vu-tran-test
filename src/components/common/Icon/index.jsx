@@ -23,6 +23,10 @@ const Icon = ({ icon, url, isActive, onClick, color, gap }) => {
 Icon.propTypes = {
   icon: PropTypes.string.isRequired,
   url: PropTypes.string,
+  color: PropTypes.string,
+  gap: PropTypes.number,
+  isActive: PropTypes.bool,
+  onClick: PropTypes.func,
 };
 
 export default Icon;
