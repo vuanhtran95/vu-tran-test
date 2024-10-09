@@ -5,7 +5,13 @@ export const perPageOptions = [
   // can add more depends on the requirement
 ];
 
+export const SORT_ORDER = Object.freeze({
+  ASC: "ASC",
+  DESC: "DESC",
+});
+
 export const sortByOptions = [
-  { value: "ASC", label: "Name (Ascending)" },
-  { value: "DESC", label: "Name (Descending)" },
+  { value: SORT_ORDER.ASC, label: "Name (A-Z)" },
+  { value: SORT_ORDER.DESC, label: "Name (Z-A)" },
+  // can add more depends on the requirement
 ];

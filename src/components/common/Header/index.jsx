@@ -6,8 +6,8 @@ const userName = "Name Surname";
 const Header = () => {
   return (
     <S.HeaderWrapper>
-      {userName}
-      <Avatar name="C C" />
+      <S.FullName>{userName}</S.FullName>
+      <Avatar name="Chris Chan" />
     </S.HeaderWrapper>
   );
 };

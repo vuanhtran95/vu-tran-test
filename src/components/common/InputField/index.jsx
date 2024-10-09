@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
-import { StyledInput, SearchContainer, SearchIcon } from "./styles";
+import * as S from './styles'
 
 const InputField = ({ width, value, placeholder, icon, onChange }) => {
   return (
-    <SearchContainer>
-      {icon && <SearchIcon icon={icon} />}
-      <StyledInput onChange={onChange} hasIcon={!!icon} width={width} value={value} placeholder={placeholder} />
-    </SearchContainer>
+    <S.InputFieldContainer>
+      {icon && <S.InputIcon icon={icon} />}
+      <S.StyledInput onChange={onChange} hasIcon={!!icon} width={width} value={value} placeholder={placeholder} />
+    </S.InputFieldContainer>
   );
 };
 

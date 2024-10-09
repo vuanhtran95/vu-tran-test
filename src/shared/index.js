@@ -7,6 +7,7 @@ export const COLORS = Object.freeze({
 
   GREY_100: "#6F7170",
   GREY_200: "#C9CCCF",
+  GREY_300: "#8C9196",
 });
 
 export const SPACING = Object.freeze({

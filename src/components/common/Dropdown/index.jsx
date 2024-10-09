@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { StyledDropdown } from "./styles";
 
-const Dropdown = ({ placeholder, options, value, onChange, width, isMulti }) => {
+const Dropdown = ({ placeholder, options, value, onChange, width, height, isMulti }) => {
   const customStyles = {
     indicatorSeparator: () => ({
       display: "none",
@@ -9,6 +9,10 @@ const Dropdown = ({ placeholder, options, value, onChange, width, isMulti }) => 
     container: provided => ({
       ...provided,
       width,
+    }),
+    control: (provided) => ({
+      ...provided,
+      minHeight: height || '48px',
     }),
   };
 

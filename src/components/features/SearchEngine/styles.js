@@ -49,11 +49,13 @@ export const SearchHeader = styled.div`
 
 export const SearchTitle = styled.div`
   font-size: ${FONT.SIZE["2XL"]};
+  font-weight: ${FONT.WEIGHT.SEMIBOLD};
 `;
 
 export const SearchSubTitle = styled.div`
   font-size: ${FONT.SIZE.M};
-  margin: ${SPACING.XL} 0;
+  margin: ${SPACING.L} 0 ${SPACING["3XL"]} 0;
+  color: ${COLORS.GREY_100};
 `;
 
 export const ResultData = styled.div`
@@ -61,8 +63,8 @@ export const ResultData = styled.div`
 `;
 
 export const ClearFilter = styled.div`
-  text-align: center;
+  display: flex;
+  justify-content: center;
   color: ${COLORS.GREEN_300};
-  cursor: pointer;
   margin: ${SPACING["XL"]} 0;
 `;

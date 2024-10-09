@@ -136,7 +136,7 @@ const SearchEngine = () => {
       <FilterGroup filters={filters} />
 
       {/* Clear search */}
-      <S.ClearFilter onClick={onClearFilters}>Clear filter</S.ClearFilter>
+      <S.ClearFilter><p onClick={onClearFilters}>Clear filter</p></S.ClearFilter>
 
       {/* Result section */}
       {data.length > 0 && (
