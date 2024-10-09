@@ -5,4 +5,5 @@ export const NoRecordWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 250px;
+  flex-direction: column;
 `;

@@ -66,7 +66,7 @@ const SearchEngine = () => {
       <DataList data={data} />
 
       {/* Pagination */}
-      <Pagination totalPages={totalPages} currentPage={currentPage} onPageChange={setCurrentPage} />
+      {totalPages > 0 && <Pagination totalPages={totalPages} currentPage={currentPage} onPageChange={setCurrentPage} />}
     </S.SearchEngine>
   );
 };
