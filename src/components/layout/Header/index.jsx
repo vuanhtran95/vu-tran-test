@@ -1,4 +1,4 @@
-import Avatar from "../Avatar";
+import { Avatar } from "components/common";
 import * as S from "./styles";
 
 const fullName = "Name Surname";

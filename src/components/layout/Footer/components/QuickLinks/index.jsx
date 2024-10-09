@@ -7,7 +7,7 @@ const Links = ({ title, links }) => {
       <S.QuickLinkTitle>{title}</S.QuickLinkTitle>
       <S.QuickLinks>
         {links.map(link => {
-          return <S.QuickLinkItem>{link.name}</S.QuickLinkItem>;
+          return <S.QuickLinkItem id={link.title}>{link.name}</S.QuickLinkItem>;
         })}
       </S.QuickLinks>
     </>

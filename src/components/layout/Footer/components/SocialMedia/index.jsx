@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
-import Icon from "../Icon";
 import * as S from "./styles";
 import { COLORS, SPACING } from "shared";
+import { Icon } from "components/common";
 
 const SocialMedia = ({ items }) => {
   return (

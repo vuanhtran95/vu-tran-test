@@ -4,7 +4,7 @@ import * as S from "./styles";
 import CompanyInfo from "./components/CompanyInfo";
 import Links from "./components/QuickLinks";
 import { legalLinks, quickLinks, socialMediaItems } from "./constants";
-import { SocialMedia } from "..";
+import SocialMedia from "./components/SocialMedia";
 
 const Footer = () => {
   return (

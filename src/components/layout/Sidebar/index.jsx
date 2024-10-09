@@ -1,8 +1,7 @@
 import * as S from "./styles";
-import Icon from "../Icon";
 import PropTypes from "prop-types";
-import Img from "../Img";
 import { useState } from "react";
+import { Icon, Img } from "components/common";
 
 const Sidebar = ({ menuItems }) => {
   const [activeMenuId, setActiveMenuId] = useState(5);
@@ -14,7 +13,7 @@ const Sidebar = ({ menuItems }) => {
       <S.ItemsWrapper>
         {menuItems.map(item => {
           return (
-            <S.IconWrapper>
+            <S.IconWrapper key={item.id}>
               <Icon
                 icon={item.icon}
                 size="2x"
