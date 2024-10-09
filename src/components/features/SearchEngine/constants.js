@@ -6,12 +6,12 @@ export const perPageOptions = [
 ];
 
 export const SORT_ORDER = Object.freeze({
-  ASC: "ASC",
-  DESC: "DESC",
+  TITLE_ASC: "TITLE_ASC",
+  TITLE_DESC: "TITLE_DESC",
 });
 
-export const sortByOptions = [
-  { value: SORT_ORDER.ASC, label: "Name (A-Z)" },
-  { value: SORT_ORDER.DESC, label: "Name (Z-A)" },
+export const sortOrderOptions = [
+  { value: SORT_ORDER.TITLE_ASC, label: "Name (A-Z)" },
+  { value: SORT_ORDER.TITLE_DESC, label: "Name (Z-A)" },
   // can add more depends on the requirement
 ];
