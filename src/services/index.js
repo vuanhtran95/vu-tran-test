@@ -180,5 +180,14 @@ export const getSearchData = () => {
       company: "Nationwide Building Society",
       date: "2023-05-19",
     },
+    {
+      id: "21",
+      title: "Testing Date Filter",
+      content: "ATM did not dispense cash but account debited.",
+      category: "ATM",
+      decision: "Upheld",
+      company: "Nationwide Building Society",
+      date: "2024-10-09",
+    },
   ];
 };

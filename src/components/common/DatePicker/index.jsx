@@ -4,9 +4,11 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import * as S from "./styles";
 import { forwardRef } from "react";
+import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 
 const CustomInput = forwardRef(({ value, onClick, placeholder }, ref) => (
-  <S.StyledCalendarInput onClick={onClick} ref={ref} type="text" value={value} readOnly placeholder="Date" />
+    <S.StyledCalendarInput onClick={onClick} ref={ref} type="text" value={value} readOnly placeholder="Date" />
+  
 ));
 
 const DateSelect = ({ value, onChange, placeholder }) => {
@@ -18,7 +20,8 @@ const DateSelect = ({ value, onChange, placeholder }) => {
         selected={value}
         onChange={onChange}
         placeholderText={placeholder}
-        icon="fa fa-calendar"
+        icon={<S.SearchIcon icon={faCalendar} />}
+        isClearable={!!value}
       />
     </S.InputContainer>
   );

@@ -136,19 +136,19 @@ const SearchEngine = () => {
       <FilterGroup filters={filters} />
 
       {/* Clear search */}
-      <S.ClearFilter><p onClick={onClearFilters}>Clear filter</p></S.ClearFilter>
+      <S.ClearFilterWrapper>
+        <S.ClearFilterButton onClick={onClearFilters}>Clear Filters</S.ClearFilterButton>
+      </S.ClearFilterWrapper>
 
       {/* Result section */}
-      {data.length > 0 && (
-        <S.ResultFilter>
-          <S.ResultTitleWrapper>
-            <S.ResultTitle>Result</S.ResultTitle>
-            <S.ResultSubTitle>Showing results 1-5 of {count}.</S.ResultSubTitle>
-          </S.ResultTitleWrapper>
-          {/* Sort */}
-          <FilterGroup filters={sortFilters} />
-        </S.ResultFilter>
-      )}
+      <S.ResultFilter>
+        <S.ResultTitleWrapper>
+          <S.ResultTitle>Result</S.ResultTitle>
+          <S.ResultSubTitle>Showing results 1-5 of {count}.</S.ResultSubTitle>
+        </S.ResultTitleWrapper>
+        {/* Sort */}
+        <FilterGroup filters={sortFilters} />
+      </S.ResultFilter>
 
       {/* Displayed data container */}
       <S.ResultData>
