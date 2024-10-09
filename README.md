@@ -58,3 +58,15 @@ The React app should now be running at `http://localhost:3000`.
    ```bash
    npm run test
    ```
+### How search feature works?
+Search Input: Users can enter text in the search bar and click the search button to look up records based on their title or content.
+
+Filters: Users can filter the search results using the following criteria:
+
+Category: Filter records by category. Decision: Filter records by the decision status. Company: Filter records by the associated company. Date: Filter records by a specific date.
+
+Pagination:
+Items per page: A dropdown allows users to select the number of items displayed per page. Page navigation: Users can switch between pages, and the data will update accordingly based on the selected page.
+
+Sorting: Users can sort records in four ways: Name (ASC/DESC): Sort by title in ascending or descending order. Date (ASC/DESC): Sort by date in ascending or descending order.
+Automatic Search Update: Every time the filters, pagination, or sorting options are changed, the search results are updated automatically.
