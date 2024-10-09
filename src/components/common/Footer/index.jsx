@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <S.FooterContainer>
       <S.FooterBody>
-        <S.FooterSection>
+        <S.FooterSection grow={5}>
           <CompanyInfo />
         </S.FooterSection>
 

@@ -13,6 +13,7 @@ export const FooterContainer = styled.footer`
 export const FooterSection = styled.div`
   display: flex;
   flex-direction: column;
+  flex-grow: ${props => props.grow || 1};
 `;
 
 export const LogoText = styled.p`
