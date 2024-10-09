@@ -8,6 +8,7 @@ const useSearchData = (filters, sortPagination) => {
 
   const [data, setData] = useState(getSearchData());
   const [count, setCount] = useState(0);
+  const [totalPages, setTotalPages] = useState(0);
 
   const onSearch = useCallback(() => {
     const { category, decision, company, date } = filters;
@@ -50,6 +51,7 @@ const useSearchData = (filters, sortPagination) => {
 
     // Update count and data
     setCount(filteredData.length); // Total count before pagination
+    setTotalPages(Math.ceil(filteredData.length / perPage));
     setData(paginatedData); // Paginated data for current page
   }, [filters, searchKeyword, sortPagination]);
 
@@ -57,6 +59,7 @@ const useSearchData = (filters, sortPagination) => {
     data,
     count,
     onSearch,
+    totalPages,
     searchKeyword,
     setSearchKeyword,
   };

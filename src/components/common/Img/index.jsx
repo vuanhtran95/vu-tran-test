@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 const Img = ({ src, alt, url }) => {
   let history = useHistory();
-
   return (
     <img
       src={src}

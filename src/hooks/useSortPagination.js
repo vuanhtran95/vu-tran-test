@@ -3,7 +3,7 @@ import { perPageOptions, sortOrderOptions } from "components/features/SearchEngi
 import { useMemo, useState } from "react";
 
 const useSortPagination = () => {
-  const [currentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
   const [perPage, setPerPage] = useState(perPageOptions[0]);
   const [sortOrder, setSortOrder] = useState();
 
@@ -30,6 +30,7 @@ const useSortPagination = () => {
   return {
     sortFilters,
     sortFilterValues: { currentPage, perPage: perPage.value, sortOrder: sortOrder?.value || undefined },
+    setCurrentPage,
   };
 };
 

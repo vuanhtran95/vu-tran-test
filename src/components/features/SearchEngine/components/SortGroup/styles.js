@@ -1,13 +1,16 @@
 import styled from "styled-components";
-import { FONT, SPACING } from "shared";
+import { COLORS, FONT, SPACING } from "shared";
 
 export const ResultTitle = styled.div`
   font-size: ${FONT.SIZE.XL};
+  font-weight: ${FONT.WEIGHT.SEMIBOLD};
 `;
 
 export const ResultSubTitle = styled.div`
-  font-size: ${FONT.SIZE.S};
-  margin-top: ${SPACING.S};
+  font-size: ${FONT.SIZE.XS};
+  margin-top: ${SPACING.XS};
+  font-weight: ${FONT.WEIGHT.NORMAL};
+  color: ${COLORS.GREY_100};
 `;
 
 export const ResultTitleWrapper = styled.div``;
@@ -16,5 +19,5 @@ export const ResultFilter = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: ${SPACING["3XL"]};
+  margin-bottom: ${SPACING.L};
 `;

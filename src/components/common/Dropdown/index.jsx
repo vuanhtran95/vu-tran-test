@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { StyledDropdown } from "./styles";
+import { COLORS } from "shared";
 
 const Dropdown = ({ placeholder, options, value, onChange, width, height, isMulti }) => {
   const customStyles = {
@@ -10,9 +11,13 @@ const Dropdown = ({ placeholder, options, value, onChange, width, height, isMult
       ...provided,
       width,
     }),
-    control: (provided) => ({
+    control: provided => ({
       ...provided,
-      minHeight: height || '48px',
+      minHeight: height || "48px",
+    }),
+    singleValue: provided => ({
+      ...provided,
+      color: COLORS.GREY_100,
     }),
   };
 

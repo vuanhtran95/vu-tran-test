@@ -3,7 +3,8 @@ export const getSearchData = () => {
     {
       id: "01",
       title: "Loan Dispute",
-      content: "Customer complaint about incorrect loan interest rate.",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
       category: "Loan",
       decision: "Upheld",
       company: "Barclays Bank Plc",

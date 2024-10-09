@@ -1,13 +1,16 @@
 export const COLORS = Object.freeze({
   PRIMARY: "#26C281",
+  GREEN_90: "#BDE9D2",
   GREEN_100: "#E4F6ED",
   GREEN_200: "#9EC59B",
   GREEN_300: "#008347",
   GREEN_400: "#194516",
 
   GREY_100: "#6F7170",
+  GREY_150: "#f0f0f0",
   GREY_200: "#C9CCCF",
   GREY_300: "#8C9196",
+  GREY_400: "#000333",
 });
 
 export const SPACING = Object.freeze({

@@ -1,5 +1,5 @@
 import Select from "react-select";
-import { FONT } from "shared";
+import { COLORS, FONT } from "shared";
 import styled from "styled-components";
 
 export const StyledDropdown = styled(Select)`
@@ -7,4 +7,5 @@ export const StyledDropdown = styled(Select)`
   width: ${props => props.width || "100%"};
   font-size: ${FONT.SIZE.XS};
   font-weight: ${FONT.WEIGHT.MEDIUM};
+  color: ${COLORS.GREY_100};
 `;

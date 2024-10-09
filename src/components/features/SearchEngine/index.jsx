@@ -10,6 +10,7 @@ import SortGroup from "./components/SortGroup";
 import useFilters from "hooks/useFilters";
 import useSortPagination from "hooks/useSortPagination";
 import DataList from "./components/DataList";
+import Pagination from "components/common/Pagination";
 
 const SearchEngine = () => {
   const {
@@ -21,9 +22,10 @@ const SearchEngine = () => {
   const {
     sortFilters,
     sortFilterValues: { perPage, currentPage, sortOrder },
+    setCurrentPage,
   } = useSortPagination();
 
-  const { data, onSearch, count, searchKeyword, setSearchKeyword } = useSearchData(
+  const { data, onSearch, count, searchKeyword, setSearchKeyword, totalPages } = useSearchData(
     {
       category,
       decision,
@@ -34,9 +36,15 @@ const SearchEngine = () => {
   );
 
   useEffect(() => {
+    setCurrentPage(1);
     onSearch();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [company, category, decision, date, sortOrder, currentPage, perPage]);
+  }, [company, category, decision, date, sortOrder, perPage]);
+
+  useEffect(() => {
+    onSearch();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentPage]);
 
   return (
     <S.SearchEngine>
@@ -52,10 +60,13 @@ const SearchEngine = () => {
       <ClearFilters onClear={onClearFilters} />
 
       {/* Result section */}
-      <SortGroup filters={sortFilters} count={count} />
+      <SortGroup filters={sortFilters} totalItems={count} currentPage={currentPage} perPage={perPage} />
 
       {/* Displayed data container */}
       <DataList data={data} />
+
+      {/* Pagination */}
+      <Pagination totalPages={totalPages} currentPage={currentPage} onPageChange={setCurrentPage} />
     </S.SearchEngine>
   );
 };
