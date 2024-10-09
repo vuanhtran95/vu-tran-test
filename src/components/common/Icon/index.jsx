@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import * as S from "./styles";
 
-const Icon = ({ icon, url, isActive, onClick }) => {
+const Icon = ({ icon, url, isActive, onClick, color, gap }) => {
   let history = useHistory();
 
   return (
@@ -11,9 +11,11 @@ const Icon = ({ icon, url, isActive, onClick }) => {
       isActive={isActive}
       onClick={() => {
         history.push(url);
-        onClick();
+        onClick?.();
       }}
       icon={icon}
+      color={color}
+      gap={gap}
     />
   );
 };

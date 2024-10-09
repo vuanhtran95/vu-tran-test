@@ -1,16 +1,19 @@
 export const COLORS = Object.freeze({
   PRIMARY: "#26C281",
+  GREEN_80: "#f5faf6",
   GREEN_90: "#BDE9D2",
   GREEN_100: "#E4F6ED",
   GREEN_200: "#9EC59B",
   GREEN_300: "#008347",
   GREEN_400: "#194516",
 
+  GREY_50: "#E4E5E7",
   GREY_100: "#6F7170",
   GREY_150: "#f0f0f0",
   GREY_200: "#C9CCCF",
   GREY_300: "#8C9196",
   GREY_400: "#000333",
+  GREY_800: "#6F7170",
 });
 
 export const SPACING = Object.freeze({
@@ -27,6 +30,7 @@ export const SPACING = Object.freeze({
   "4XL": "80px",
   "5XL": "96px",
   "6XL": "128px",
+  "7XL": "256px",
 });
 
 export const FONT = Object.freeze({

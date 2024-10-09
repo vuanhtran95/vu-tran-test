@@ -1,27 +1,36 @@
-import SocialMedia from "../SocialMedia";
-import { socialMediaItems } from "./constants";
+import React from "react";
+
 import * as S from "./styles";
+import CompanyInfo from "./components/CompanyInfo";
+import Links from "./components/QuickLinks";
+import { legalLinks, quickLinks, socialMediaItems } from "./constants";
+import { SocialMedia } from "..";
 
 const Footer = () => {
   return (
-    <S.FooterWrapper>
-      <S.FooterMainContent>
-        {/* Company Information */}
-        <S.CompanyInfo>CourtCorrect</S.CompanyInfo>
+    <S.FooterContainer>
+      <S.FooterBody>
+        <S.FooterSection>
+          <CompanyInfo />
+        </S.FooterSection>
 
-        {/* Quick Links */}
-        <S.QuickLinks>Quick Links</S.QuickLinks>
+        <S.FooterSection>
+          <Links title="Quick Links" links={quickLinks} />
+        </S.FooterSection>
 
-        {/* Legals */}
-        <S.Legals>Legals</S.Legals>
-      </S.FooterMainContent>
+        <S.FooterSection>
+          <Links title="Legals" links={legalLinks} />
+        </S.FooterSection>
+      </S.FooterBody>
 
-      {/* Social Media Links */}
-      <S.FooterSocialLinks>
-        <div>2023 CourtCorrect LTD</div>
+      <S.SocialMediaIcons>
+        <S.Ltd>
+          <span>©</span> 2023 CourtCorrect LTD
+        </S.Ltd>
         <SocialMedia items={socialMediaItems} />
-      </S.FooterSocialLinks>
-    </S.FooterWrapper>
+      </S.SocialMediaIcons>
+    </S.FooterContainer>
   );
 };
+
 export default Footer;
