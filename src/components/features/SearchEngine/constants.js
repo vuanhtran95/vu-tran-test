@@ -6,6 +6,6 @@ export const perPageOptions = [
 ];
 
 export const sortByOptions = [
-  { value: "ASC", label: "Ascending" },
-  { value: "DESC", label: "Descending" },
+  { value: "ASC", label: "Name (Ascending)" },
+  { value: "DESC", label: "Name (Descending)" },
 ];
