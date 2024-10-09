@@ -8,6 +8,10 @@ export const FooterContainer = styled.footer`
   position: relative;
   bottom: 0;
   min-height: 200px;
+
+  @media (max-width: 768px) {
+    padding: ${SPACING.S};
+  }
 `;
 
 export const FooterSection = styled.div`
@@ -63,6 +67,12 @@ export const SocialMediaIcons = styled.div`
   margin-top: 20px;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 768px) {
+    gap: 0;
+    flex-direction: column;
+    align-items: start;
+  }
 `;
 
 export const SocialIcon = styled(FontAwesomeIcon)`
@@ -86,6 +96,10 @@ export const FooterBody = styled.div`
   justify-content: space-between;
   border-bottom: 1px solid ${COLORS.GREY_50};
   padding-bottom: ${SPACING.S};
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const Ltd = styled.p`

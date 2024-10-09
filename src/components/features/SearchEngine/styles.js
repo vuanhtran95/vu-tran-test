@@ -5,6 +5,10 @@ export const SearchEngine = styled.div`
   margin: auto;
   margin-top: 96px;
   width: 1032px;
+
+  @media (max-width: 768px) {
+    width: calc(100% - 30px);
+  }
 `;
 
 export const DropdownGroup = styled.div`

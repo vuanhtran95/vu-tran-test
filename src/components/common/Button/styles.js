@@ -14,4 +14,8 @@ export const StyledButton = styled.button`
   color: white;
   border: none;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 100px;
+  }
 `;

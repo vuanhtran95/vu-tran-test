@@ -20,4 +20,9 @@ export const ResultFilter = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: ${SPACING.L};
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: start;
+  }
 `;

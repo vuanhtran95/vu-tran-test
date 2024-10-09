@@ -8,6 +8,10 @@ export const SidebarContainer = styled.div`
   padding: 20px;
   border-right: 1px solid ${COLORS.GREEN_100};
   width: 30px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const IconWrapper = styled.div`
