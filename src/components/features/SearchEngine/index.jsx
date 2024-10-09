@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import * as S from "./styles";
 
 import useSearchData from "hooks/useSearchData";
@@ -35,6 +35,11 @@ const SearchEngine = () => {
     { currentPage, perPage, sortOrder }
   );
 
+  const onClickSearch = useCallback(() => {
+    setCurrentPage(1);
+    onSearch();
+  }, [onSearch, setCurrentPage]);
+
   useEffect(() => {
     setCurrentPage(1);
     onSearch();
@@ -51,7 +56,7 @@ const SearchEngine = () => {
       <SearchPageTitle />
 
       {/* Search Box */}
-      <SearchBox searchKeyword={searchKeyword} setSearchKeyword={setSearchKeyword} onSearch={() => onSearch()} />
+      <SearchBox searchKeyword={searchKeyword} setSearchKeyword={setSearchKeyword} onSearch={() => onClickSearch()} />
 
       {/* Filter: Category, Decision, Company, Date */}
       <FilterGroup filters={filters} />
