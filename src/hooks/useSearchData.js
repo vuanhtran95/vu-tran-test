@@ -36,12 +36,18 @@ const useSearchData = (filters, sortPagination) => {
     // Sorting logic by title
     if (sortOrder) {
       filteredData = filteredData.sort((a, b) => {
-        if (sortOrder === SORT_ORDER.TITLE_ASC) {
-          return a.title.toLowerCase().localeCompare(b.title.toLowerCase()); // Sort by title ascending
-        } else if (sortOrder === SORT_ORDER.TITLE_DESC) {
-          return b.title.toLowerCase().localeCompare(a.title.toLowerCase()); // Sort by title descending
+        switch (sortOrder) {
+          case SORT_ORDER.TITLE_ASC:
+            return a.title.toLowerCase().localeCompare(b.title.toLowerCase()); // Sort by title ascending
+          case SORT_ORDER.TITLE_DESC:
+            return b.title.toLowerCase().localeCompare(a.title.toLowerCase()); // Sort by title descending
+          case SORT_ORDER.DATE_ASC:
+            return new Date(a.date) - new Date(b.date); // Sort by date ascending (oldest to newest)
+          case SORT_ORDER.DATE_DESC:
+            return new Date(b.date) - new Date(a.date); // Sort by date descending (newest to oldest)
+          default:
+            return 0; // If no sorting order is specified, return unchanged
         }
-        return 0; // If no sorting order is specified, return unchanged
       });
     }
 
