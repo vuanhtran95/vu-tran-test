@@ -17,12 +17,17 @@ export const SearchGroup = styled.div`
   display: flex;
   gap: ${SPACING.SM};
   width: 100%;
+  margin: ${SPACING.L} 0;
 `;
 
 export const ResultFilter = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: ${SPACING["3XL"]};
 `;
+
+export const ResultTitleWrapper = styled.div``;
 
 export const SortFilter = styled.div`
   display: flex;
@@ -35,6 +40,7 @@ export const ResultTitle = styled.div`
 
 export const ResultSubTitle = styled.div`
   font-size: ${FONT.SIZE.S};
+  margin-top: ${SPACING.S};
 `;
 
 export const SearchHeader = styled.div`
@@ -47,6 +53,7 @@ export const SearchTitle = styled.div`
 
 export const SearchSubTitle = styled.div`
   font-size: ${FONT.SIZE.M};
+  margin: ${SPACING.XL} 0;
 `;
 
 export const ResultData = styled.div`
@@ -57,4 +64,5 @@ export const ClearFilter = styled.div`
   text-align: center;
   color: ${COLORS.GREEN_300};
   cursor: pointer;
+  margin: ${SPACING["XL"]} 0;
 `;

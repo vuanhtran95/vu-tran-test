@@ -6,4 +6,5 @@ export const HeaderWrapper = styled.div`
   justify-content: end;
   align-items: center;
   gap: ${SPACING.S};
+  margin: ${SPACING.S} ${SPACING.M};
 `;
