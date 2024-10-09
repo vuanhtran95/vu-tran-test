@@ -1,5 +1,5 @@
+import SearchPage from "components/pages/Search";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import SearchPage from "./components/pages/Search.js";
 
 const App = () => {
   return (
